@@ -5,15 +5,48 @@ mode: rule
 log-level: info
 external-controller: '127.0.0.1:9090'
 dns:
-    enable: true
-    ipv6: false
-    default-nameserver: [1.1.1.1, 8.8.8.8]
-    enhanced-mode: fake-ip
-    fake-ip-range: 198.18.0.1/16
-    use-hosts: true
-    nameserver: ['https://doh.pub/dns-query']
-    fallback: ['https://doh.dns.sb/dns-query', 'https://dns.cloudflare.com/dns-query', 'https://dns.twnic.tw/dns-query', 'tls://8.8.4.4:853']
-    fallback-filter: { geoip: true, ipcidr: [240.0.0.0/4, 0.0.0.0/32] }
+  enable: true # 是否启用dns false
+  ipv6: false
+  listen: 0.0.0.0:53
+  enhanced-mode: fake-ip # 模式：redir-host或fake-ip
+  fake-ip-range: 198.18.0.1/16 #
+  fake-ip-filter: # fake ip 白名单列表，如果你不知道这个参数的作用，请勿修改
+     - '*.lan'
+     - localhost.ptlogin2.qq.com
+  default-nameserver:
+    - 114.114.114.114
+    - 8.8.8.8
+    - tls://1.12.12.12:853
+    - tls://223.5.5.5:853
+    - system
+  use-hosts: true
+  nameserver:
+     - 223.5.5.5 # 阿里DNS
+     - 180.76.76.76 # 百度DNS
+     - 119.29.29.29 # 腾讯DNS
+     - 117.50.11.11 # ONE DNS拦截版 恶意网站拦截、广告过滤
+     - 117.50.10.10 # ONE DNS纯净版 直接返回其真实的响应结果
+     - 114.114.114.114 # 114DNS
+     - https://dns.alidns.com/dns-query # 阿里 DoH DNS
+     - https://doh.360.cn/dns-query # 360 DoH DNS
+     - https://doh.pub/dns-query
+  fallback:
+     - 8.8.8.8 # 谷歌DNS
+     - 1.1.1.1 # Cloudflare DNS
+     - tls://dns.rubyfish.cn:853
+     - tls://1.0.0.1:853
+     - tls://dns.google:853
+     - https://dns.rubyfish.cn/dns-query
+     - https://cloudflare-dns.com/dns-query
+     - https://dns.google/dns-query
+     - https://doh.dns.sb/dns-query
+     - https://dns.twnic.tw/dns-query
+     - tls://8.8.4.4:853
+  fallback-filter:
+     geoip: true # 默认
+     ipcidr: # 在这个网段内的 IP 地址会被考虑为被污染的 IP
+       - 240.0.0.0/4
+       - 0.0.0.0/32
 proxies:
     - {"name":"肥猫云 - 付费高速节点 (fcweb.cc)","type":"vless","server":"awsall.freenodes01.cc","port":443,"uuid":"fdb33312-c939-cd65-5cee-ec1894ce44f3","network":"tcp","tls":true,"udp":true,"flow":"xtls-rprx-vision","servername":"www.microsoft.com","reality-opts":{"public-key":"0XqnX5cXAa6isFhTW4eIM_CaAHTXJJ8tbMs9XabxJ1A","short-id":""},"client-fingerprint":"chrome"}
     - {"name":"免费节点 - 每日更新 (nodesdz.com)","type":"vless","server":"awsall.freenodes01.cc","port":443,"uuid":"fdb33312-c939-cd65-5cee-ec1894ce44f3","network":"tcp","tls":true,"udp":true,"flow":"xtls-rprx-vision","servername":"www.microsoft.com","reality-opts":{"public-key":"0XqnX5cXAa6isFhTW4eIM_CaAHTXJJ8tbMs9XabxJ1A","short-id":""},"client-fingerprint":"chrome"}
