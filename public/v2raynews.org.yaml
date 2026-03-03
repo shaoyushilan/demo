@@ -48,10 +48,10 @@ dns:
        - 240.0.0.0/4
        - 0.0.0.0/32
 proxies:
-    - {"name":"肥猫云 - 付费高速节点 (fcweb.cc)","type":"vless","server":"awsall.freenodes01.cc","port":443,"uuid":"e60c6e01-19c9-ccfd-b38e-f7bc7f529420","network":"tcp","tls":true,"udp":true,"flow":"xtls-rprx-vision","servername":"www.microsoft.com","reality-opts":{"public-key":"0XqnX5cXAa6isFhTW4eIM_CaAHTXJJ8tbMs9XabxJ1A","short-id":""},"client-fingerprint":"chrome"}
-    - {"name":"免费节点 - 每日更新 (nodesdz.com)","type":"vless","server":"awsall.freenodes01.cc","port":443,"uuid":"e60c6e01-19c9-ccfd-b38e-f7bc7f529420","network":"tcp","tls":true,"udp":true,"flow":"xtls-rprx-vision","servername":"www.microsoft.com","reality-opts":{"public-key":"0XqnX5cXAa6isFhTW4eIM_CaAHTXJJ8tbMs9XabxJ1A","short-id":""},"client-fingerprint":"chrome"}
-    - {"name":"香港-20台高可用负载","type":"vless","server":"awshk.freenodes01.cc","port":443,"uuid":"e60c6e01-19c9-ccfd-b38e-f7bc7f529420","network":"tcp","tls":true,"udp":true,"flow":"xtls-rprx-vision","servername":"www.microsoft.com","reality-opts":{"public-key":"0XqnX5cXAa6isFhTW4eIM_CaAHTXJJ8tbMs9XabxJ1A","short-id":""},"client-fingerprint":"chrome"}
-    - {"name":"日本-12台高可用负载","type":"vless","server":"awsjp.freenodes01.cc","port":443,"uuid":"e60c6e01-19c9-ccfd-b38e-f7bc7f529420","network":"tcp","tls":true,"udp":true,"flow":"xtls-rprx-vision","servername":"www.microsoft.com","reality-opts":{"public-key":"0XqnX5cXAa6isFhTW4eIM_CaAHTXJJ8tbMs9XabxJ1A","short-id":""},"client-fingerprint":"chrome"}
+    - {"name":"肥猫云 - 付费高速节点 (fcweb.cc)","type":"vless","server":"awsall.freenodes01.cc","port":443,"uuid":"e1fa3449-4b71-e1b0-674d-36ae27efe5aa","network":"tcp","tls":true,"udp":true,"flow":"xtls-rprx-vision","servername":"www.microsoft.com","reality-opts":{"public-key":"0XqnX5cXAa6isFhTW4eIM_CaAHTXJJ8tbMs9XabxJ1A","short-id":""},"client-fingerprint":"chrome"}
+    - {"name":"免费节点 - 每日更新 (nodesdz.com)","type":"vless","server":"awsall.freenodes01.cc","port":443,"uuid":"e1fa3449-4b71-e1b0-674d-36ae27efe5aa","network":"tcp","tls":true,"udp":true,"flow":"xtls-rprx-vision","servername":"www.microsoft.com","reality-opts":{"public-key":"0XqnX5cXAa6isFhTW4eIM_CaAHTXJJ8tbMs9XabxJ1A","short-id":""},"client-fingerprint":"chrome"}
+    - {"name":"香港-20台高可用负载","type":"vless","server":"awshk.freenodes01.cc","port":443,"uuid":"e1fa3449-4b71-e1b0-674d-36ae27efe5aa","network":"tcp","tls":true,"udp":true,"flow":"xtls-rprx-vision","servername":"www.microsoft.com","reality-opts":{"public-key":"0XqnX5cXAa6isFhTW4eIM_CaAHTXJJ8tbMs9XabxJ1A","short-id":""},"client-fingerprint":"chrome"}
+    - {"name":"日本-12台高可用负载","type":"vless","server":"awsjp.freenodes01.cc","port":443,"uuid":"e1fa3449-4b71-e1b0-674d-36ae27efe5aa","network":"tcp","tls":true,"udp":true,"flow":"xtls-rprx-vision","servername":"www.microsoft.com","reality-opts":{"public-key":"0XqnX5cXAa6isFhTW4eIM_CaAHTXJJ8tbMs9XabxJ1A","short-id":""},"client-fingerprint":"chrome"}
 
 proxy-groups:
   - name: 🚀 节点选择
